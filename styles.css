@@ -1,0 +1,1021 @@
+body {
+    margin: 0px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+/* Header */
+
+#body-header {
+    height: 66vh;
+    opacity: 0.8;
+    background-image: url("webimage.png") ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;
+}
+
+/* Horizonatal Line */
+
+.horizontal-list {
+    padding-top: 0px;
+    margin: 0px;
+}
+.horizontal-list li {
+    display: inline;
+    margin: 0px 8px 8px 0px;
+}
+.horizontal-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-menu li a{
+    transition: color 0.5s ,border-bottom 4s;
+}
+.nav-menu li a:hover{
+    color: blanchedalmond;
+    border-bottom: 2px solid white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Social icons */
+#name-social-container {
+    margin-top: 30vh;
+}
+#my-name {
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons li a i {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+.social-icons li a:hover {
+    box-shadow: 0px 0px 6px 4px rgba(230 , 196 , 196 , 0.3);
+}
+
+/* SECTION CLASS */
+section{
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid black;
+    height: 500px;*/
+    align-items: center;
+    /*padding-bottom: 20px;*/
+}
+section:nth-child(2n){
+    background-color: antiquewhite;
+}
+section:nth-child(2n+1){
+    background-color: white;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color: #ed9cf0;
+    /*display: inline-block;*/
+    padding: 10px;
+    /*margin-left: 0.5rem;*/
+}
+
+/* About Section */
+#About{
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+#my-img{
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -17vh;
+}
+#my-img img{
+    height: 95%;
+    width: 94%;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+}
+
+#about-para{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+    color: gray;
+    line-height: 28px;
+    font-size: 1.1rem;
+    margin: auto;
+}
+.text-highlight{
+    color: #ed9cf0;
+    font-weight: 600;
+}
+
+/* Skill section*/
+.skills-display{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skill-progress{
+    width: 28%;
+    min-width: 180px;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px 10px;
+    overflow: hidden; 
+    
+}
+
+
+.skill-name{
+    height:100%;           
+    display:flex;           
+    align-items:center;     
+}
+
+.skill-name span{
+    color:white;
+    font-size:1rem;
+    margin-left:10px;
+}
+
+.skill-progress > div{
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
+}
+
+.skill-name span{
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+/* Setting background color */
+.mb-blue{
+    background-color: rgb(210, 132, 137);
+}
+
+.c{
+    width:60%;
+    height:inherit;
+}
+
+.html{
+    width:85%;
+    height:inherit;
+}
+
+.python{
+    width:80%;
+    height:inherit;
+}
+
+.java{
+    width:75%;
+    height:inherit;
+}
+
+.github{
+    width:70%;
+    height:inherit;
+}
+
+.rag{
+    width:60%;
+    height:inherit;
+}
+
+/* =========================================
+   PROJECTS - TRAVEL TIMELINE
+========================================= */
+
+#Projects {
+    position: relative;
+    padding: 80px 8%;
+    overflow: hidden;
+}
+
+
+/* Project heading */
+
+#Projects .section-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+/* Main timeline container */
+
+.projects-container {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 30px 0 80px;
+}
+
+
+/* =========================================
+   CENTER LINE
+========================================= */
+
+.projects-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 4px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        #9b72b0,
+        #d9a7d8,
+        #9b72b0
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   AIRPLANE
+========================================= */
+
+.projects-container::after {
+    content: "✈";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: var(--plane-position, 0px);
+
+    transform: translateX(-50%) rotate(90deg);
+
+    font-size: 32px;
+
+    z-index: 10;
+
+    transition: top 0.15s linear;
+
+    filter: drop-shadow(
+        0 3px 4px rgba(0, 0, 0, 0.2)
+    );
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+    position: relative;
+
+    width: 42%;
+
+    padding: 25px;
+
+    margin-bottom: 70px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 2px solid rgba(155, 114, 176, 0.25);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   ALTERNATING LEFT AND RIGHT
+========================================= */
+
+.project-card:nth-child(odd) {
+    margin-right: auto;
+
+    margin-left: 0;
+}
+
+
+.project-card:nth-child(even) {
+    margin-left: auto;
+
+    margin-right: 0;
+}
+
+
+/* =========================================
+   LEAF / CARD SHAPE
+========================================= */
+
+.project-card:nth-child(odd) {
+    border-radius:
+        30px 5px 30px 5px;
+}
+
+
+.project-card:nth-child(even) {
+    border-radius:
+        5px 30px 5px 30px;
+}
+
+
+/* =========================================
+   CONNECTION TO CENTER LINE
+========================================= */
+
+.project-card:nth-child(odd)::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    right: -18%;
+
+    width: 18%;
+
+    height: 2px;
+
+    background: #b78ac4;
+}
+
+
+.project-card:nth-child(even)::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: -18%;
+
+    width: 18%;
+
+    height: 2px;
+
+    background: #b78ac4;
+}
+
+
+/* =========================================
+   LITTLE CIRCLE ON THE TIMELINE
+========================================= */
+
+.project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 16px;
+
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #8b6bb1;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 0 0 2px #b78ac4;
+
+    z-index: 5;
+}
+
+
+/* Left cards */
+
+.project-card:nth-child(odd)::before {
+
+    right: -22%;
+
+    transform: translate(50%, -50%);
+}
+
+
+/* Right cards */
+
+.project-card:nth-child(even)::before {
+
+    left: -22%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   PROJECT TEXT
+========================================= */
+
+.project-card h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    color: #6d4c8d;
+
+    font-size: 24px;
+}
+
+
+.project-card p {
+
+    line-height: 1.7;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+.project-card p:last-child {
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #8062a3;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.project-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.18);
+
+    border-color: #b78ac4;
+}
+
+
+/* =========================================
+   MOBILE VIEW
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    #Projects {
+        padding: 60px 5%;
+    }
+
+
+    .projects-container::before {
+
+        left: 20px;
+
+        transform: none;
+    }
+
+
+    .projects-container::after {
+
+        left: 20px;
+
+        transform: translateX(-50%) rotate(90deg);
+    }
+
+
+    .project-card {
+
+        width: calc(100% - 60px);
+
+        margin-left: 60px !important;
+
+        margin-right: 0 !important;
+
+        margin-bottom: 50px;
+    }
+
+
+    .project-card:nth-child(odd),
+    .project-card:nth-child(even) {
+
+        border-radius: 20px;
+    }
+
+
+    .project-card::after {
+
+        left: -40px !important;
+
+        right: auto !important;
+
+        width: 40px !important;
+    }
+
+
+    .project-card::before {
+
+        left: -40px !important;
+
+        right: auto !important;
+
+        transform: translate(-50%, -50%) !important;
+    }
+
+}
+/* =========================================
+   CONTACT / FOOTER
+========================================= */
+
+#Contact {
+    position: relative;
+
+    margin-top: 80px;
+
+    padding: 70px 8% 30px;
+
+    background: linear-gradient(
+        135deg,
+        #3f3155,
+        #624875,
+        #80629a
+    );
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CONTACT HEADING
+========================================= */
+
+#Contact .section-heading {
+    justify-content: center;
+
+    color: white;
+
+    margin-bottom: 35px;
+}
+
+#Contact .section-heading i {
+    color: #e5b5e5;
+}
+
+
+/* =========================================
+   CONTACT CONTAINER
+========================================= */
+
+.contact-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-info {
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+
+.contact-info p {
+
+    line-height: 1.7;
+
+    color: #eeeeee;
+
+    margin: 15px 0;
+}
+
+
+.contact-info p i {
+
+    width: 25px;
+
+    margin-right: 10px;
+
+    color: #e2a9df;
+}
+
+/* =========================================
+   FOOTER SOCIAL ICONS
+========================================= */
+
+#Contact .social-icons {
+
+    margin-top: 35px;
+
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+#Contact .social-icons li a {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+#Contact .social-icons li a:hover {
+
+    background: white;
+
+    color: #624875;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM LINE
+========================================= */
+
+#Contact::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80%;
+
+    height: 1px;
+
+    margin: 45px auto 20px;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+/* =========================================
+   HORIZONTAL CONTACT DETAILS
+========================================= */
+
+.contact-info {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin: 0;
+
+    padding: 0 25px;
+
+    line-height: 1.5;
+
+    color: #eeeeee;
+}
+
+
+/* Vertical separator */
+
+.contact-info p + p {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* Icons */
+
+.contact-info p i {
+    width: auto;
+
+    margin-right: 8px;
+
+    color: #e2a9df;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+
+    .contact-info p {
+        display: flex;
+
+        justify-content: center;
+
+        padding: 8px 0;
+    }
+
+    .contact-info p + p {
+        border-left: none;
+    }
+
+}
+
+/* =========================================
+   FOOTER COPYRIGHT
+========================================= */
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    #Contact {
+
+        padding: 60px 5% 25px;
+    }
+
+
+    .contact-container {
+
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+}
+/* =========================================
+   EDUCATION SECTION
+========================================= */
+
+#Education {
+    padding: 80px 8%;
+}
+
+
+/* Education heading */
+
+#Education .section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* Education container */
+
+.education-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Education card */
+
+.education-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    background: transparent;
+
+    border: 1px solid rgba(128, 98, 163, 0.3);
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8062a3;
+}
+
+
+/* Education icon */
+
+.education-icon {
+    min-width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: transparent;
+
+    border: 2px solid #8062a3;
+
+    color: #8062a3;
+
+    font-size: 20px;
+}
+
+
+/* Education content */
+
+.education-content h2 {
+    margin: 0 0 8px;
+
+    color: #604477;
+}
+
+
+.education-content h3 {
+    margin: 0 0 8px;
+
+    color: #8062a3;
+}
+
+
+.education-content p {
+    line-height: 1;
+
+    color: #555;
+}
+
+
+.education-content p:first-of-type {
+    font-weight: bold;
+
+    color: #b56db5;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+
+    .education-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+/* =========================================
+   COMPACT EDUCATION SECTION
+========================================= */
+
+#Education {
+    padding: 50px 8% 30px;
+}
+
+
+/* Education heading */
+
+#Education .section-heading {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+
+/* Education container */
+
+.education-container {
+    max-width: 850px;
+}
+
+
+/* Education card */
+
+.education-card {
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+
+/* Education icon */
+
+.education-icon {
+    min-width: 55px;
+    height: 55px;
+    font-size: 22px;
+}
+
+
+/* Main degree title */
+
+.education-content h2 {
+    font-size: 23px;
+    margin: 0 0 5px;
+}
+
+
+/* College name */
+
+.education-content h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+
+/* Year */
+
+.education-content p {
+    font-size: 14px;
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+
+/* Description */
+
+.education-content p:last-child {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
