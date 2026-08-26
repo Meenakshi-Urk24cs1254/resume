@@ -1019,3 +1019,40 @@ section:nth-child(2n+1){
     line-height: 1.5;
     margin-top: 8px;
 }
+/* =========================
+   MOBILE HEADER FIX
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    #body-header {
+        height: 50vh;
+        min-height: 380px;
+
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    #name-social-container {
+        margin-top: 22vh;
+    }
+
+    #my-name {
+        font-size: 1.6rem;
+    }
+
+    #my-img {
+        width: 9rem;
+        height: 9rem;
+
+        margin-top: -4.5rem;
+    }
+
+    #my-img img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+}
